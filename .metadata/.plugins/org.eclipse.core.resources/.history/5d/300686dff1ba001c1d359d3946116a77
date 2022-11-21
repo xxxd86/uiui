@@ -1,0 +1,30 @@
+package sample1;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		//字节与字符串
+		//字节转换为字符
+       byte b[]= {1,2,3,89,78,97};//字节数组
+       String str=new String(b);
+       System.out.println(str);//输出为乱码
+       //字符串转换为字节数组
+       String ss="xyz中";
+       byte bs[]=ss.getBytes();
+       for(byte bt:bs)
+       {
+    	   System.out.println(bt+"");
+       }
+       //字符与字符串的关系//字符数组~字符串
+       char ch[]= {'系','字','符'};
+       String sc=new String(ch);
+       System.out.println(sc);
+       char css[]=new  char[5];
+       ss.getChars(0, 4, css, 0);
+       for(char r:css)
+       {
+    	   System.out.println(r);
+       }
+	}
+
+}

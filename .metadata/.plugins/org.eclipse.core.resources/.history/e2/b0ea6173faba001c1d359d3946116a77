@@ -1,0 +1,29 @@
+package fuck;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LocalDate now1=LocalDate.now();//默认格式
+		String now=LocalDate.now().format
+				(DateTimeFormatter.ofPattern("yyyy年MM月dd日"));//自定义日期格式
+        System.out.println(now);
+        LocalDateTime ldt=LocalDateTime.now();
+        System.out.println(ldt);
+        String myldt=ldt.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日 hh:mm:ss"));
+        System.out.println(myldt);
+        System.out.println(LocalDate.now().getDayOfYear());
+        System.out.println(LocalDate.now().getDayOfWeek());
+        System.out.println(LocalDate.now().plusDays(50));//增加相应时间
+        LocalDate mydate=LocalDate.parse("2000-07-01");
+        System.out.println(ChronoUnit.DAYS.between(mydate,now1));
+        
+
+	}
+
+}

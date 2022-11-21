@@ -1,0 +1,22 @@
+package fuck;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String now=LocalDate.now().format
+				(DateTimeFormatter.ofPattern("yyyy年MM月dd日"));//自定义日期格式
+        System.out.println(now);
+        LocalDateTime ldt=LocalDateTime.now();
+        System.out.println(ldt);
+        String myldt=ldt.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日 hh:mm:ss"));
+        System.out.println(myldt);
+        
+
+	}
+
+}

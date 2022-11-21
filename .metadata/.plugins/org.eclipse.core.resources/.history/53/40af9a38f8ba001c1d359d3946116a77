@@ -1,0 +1,67 @@
+package sample1;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		//字节与字符串
+		//字节转换为字符
+       byte b[]= {1,2,3,89,78,97};//字节数组
+       String str=new String(b);
+       System.out.println(str);//输出为乱码
+       //字符串转换为字节数组
+       String ss="xyz中";
+       byte bs[]=ss.getBytes();
+       for(byte bt:bs)
+       {
+    	   System.out.println(bt+"");
+       }
+       
+       //字符与字符串的关系//字符数组~字符串
+       char ch[]= {'系','字','符'};
+       String sc=new String(ch);
+       System.out.println(sc);
+       char css[]=new  char[ss.length()];
+       ss.getChars(0,ss.length(), css, 0);
+       for(char r:css)
+       {
+    	   System.out.println(r);
+       }
+       String st1=new String("xyz");
+       String st2="xyz";//与st1内容相同但是地址不同
+       String st3="xyz";//与st2地址内容相同
+       System.out.println(st1==st2);//false
+       System.out.println(st1.equals(st2));//内容相同
+       System.out.println(st1.equalsIgnoreCase(st2));//内容相同
+       System.out.println(st3==st2);//true
+       System.out.println(st3.equals(st2));//内容相同
+       String s4=st1;//内容地址与new空间位置相同，与常量地址不同
+       //startswith比较前缀
+       //substring//分离
+       //手机后面四位替换
+       String m="1383786787";
+       String m1=m.substring(7);
+       System.out.println(m1);
+       m1=m1.replace(m1, "****");
+       System.out.println(m1);
+       String m2=m.substring(0,7);
+       System.out.println(m2+m1);
+       //分割字符串
+       String s="89      98      90";
+       String st[]=s.split("\\s+");
+       for(String stf:st)
+       {
+    	   System.out.println(stf+" ");
+       }
+       
+	}
+
+}
+
+
+
+
+
+
+
+
+
